@@ -1,8 +1,6 @@
 branch-defaults:
   default:
     environment: Udafinal-env
-deploy:
-  artifact: www/archive.zip
 environment-defaults:
   Udafinal-env:
     branch: null
