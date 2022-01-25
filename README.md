@@ -1,65 +1,60 @@
 # Udagram
 
-This application is provided to you as an alternative starter project if you do not wish to host your own code done in the previous courses of this nanodegree. The udagram application is a fairly simple application that includes all the major components of a Full-Stack web application.
-
 ## Getting Started
 
-1. Clone this repo locally into the location of your choice.
-1. Move the content of the udagram folder at the root of the repository as this will become the main content of the project.
-1. Open a terminal and navigate to the root of the repo
-1. follow the instructions in the installation step
+here we will go through the process of the project we will discuss the infrastructure, app dependencies and the pipeline process
 
-The project can run but is missing some information to connect to the database and storage service. These will be setup during the course of the project
+## Infrastructure
 
-### Dependencies
+these project uses angular, node, express, jasmine.
+we set up a node environment to run the server and we connect the server with a (RDS) postgres database on (AWS) then the frontend uses the angular framework to build it, below are some useful links for them
 
-```
-- Node v14.15.1 (LTS) or more recent. While older versions can work it is advisable to keep node to latest LTS version
+the port that the database uses is (5430)
 
-- npm 6.14.8 (LTS) or more recent, Yarn can work but was not tested for this project
+the Environment variables will be supplied via screenshots
 
-- AWS CLI v2, v1 can work but was not tested for this project
-
-- A RDS database running Postgres.
-
-- A S3 bucket for hosting uploaded pictures.
-
-```
-
-### Installation
-
-Provision the necessary AWS services needed for running the application:
-
-1. In AWS, provision a publicly available RDS database running Postgres. <Place holder for link to classroom article>
-1. In AWS, provision a s3 bucket for hosting the uploaded files. <Place holder for tlink to classroom article>
-1. Export the ENV variables needed or use a package like [dotnev](https://www.npmjs.com/package/dotenv)/.
-1. From the root of the repo, navigate udagram-api folder `cd starter/udagram-api` to install the node_modules `npm install`. After installation is done start the api in dev mode with `npm run dev`.
-1. Without closing the terminal in step 1, navigate to the udagram-frontend `cd starter/udagram-frontend` to intall the node_modules `npm install`. After installation is done start the api in dev mode with `npm run start`.
-
-## Testing
-
-This project contains two different test suite: unit tests and End-To-End tests(e2e). Follow these steps to run the tests.
-
-1. `cd starter/udagram-frontend`
-1. `npm run test`
-1. `npm run e2e`
-
-There are no Unit test on the back-end
-
-### Unit Tests:
-
-Unit tests are using the Jasmine Framework.
-
-### End to End Tests:
-
-The e2e tests are using Protractor and Jasmine.
-
-## Built With
+### Built With
 
 - [Angular](https://angular.io/) - Single Page Application Framework
 - [Node](https://nodejs.org) - Javascript Runtime
 - [Express](https://expressjs.com/) - Javascript API Framework
 
-## License
+## App Dependencies
 
-[License](LICENSE.txt)
+the app uses (bcrypt, bodyparser, cors, dontenv, email-validator, express, jsonwebtoken, pg[postgres], reflect-metadata, sequelize,angular, ionic, core-js, rxjs, zone,js) for production and uses (the types for [bluebird,cors,express,node,sequelize,validator,eslint,angular,ionic,jasmine,node]chai,mocha,ts-node,typescript,codelyzer,karma,protractor) the app uses typescript and jasmine and mocha for testing
+
+## Pipeline process
+
+the pipeline is configured with circleci to run with this repo when there is a new commit that is made the process is as follows
+
+1. node get installed
+2. aws-cli get setup
+3. aws-elastic-beanstalk get setup
+4. the frontend install dependencies
+5. the backend install dependencies
+6. the frontend builds
+7. the backend builds
+8. the backend deploys to elastic-beanstalk
+9. the frontend deploys to s3
+
+## Testing
+
+This project contains two different test suite: unit tests and End-To-End tests(e2e). Follow these steps to run the tests.
+
+1. `cd udagram-frontend`
+1. `npm run test`
+1. `npm run e2e`
+
+There are no Unit test on the back-end
+
+## Link to the project
+
+[click here](http://projectex12345if.s3-website-us-east-1.amazonaws.com)
+
+### Unit Tests
+
+Unit tests are using the Jasmine Framework.
+
+### End to End Tests
+
+The e2e tests are using Protractor and Jasmine.
