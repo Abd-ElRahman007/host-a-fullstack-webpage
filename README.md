@@ -37,6 +37,10 @@ the pipeline is configured with circleci to run with this repo when there is a n
 8. the backend deploys to elastic-beanstalk
 9. the frontend deploys to s3
 
+the badge for the pipeline build
+
+[![CircleCI](https://circleci.com/gh/Abd-ElRahman007/host-a-fullstack-webpage.svg?style=svg)](https://circleci.com/gh/Abd-ElRahman007/host-a-fullstack-webpage)
+
 ## Testing
 
 This project contains two different test suite: unit tests and End-To-End tests(e2e). Follow these steps to run the tests.
